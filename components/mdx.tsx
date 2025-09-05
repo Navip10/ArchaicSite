@@ -1,3 +1,5 @@
+"use client"
+
 import { useMDXComponent } from "next-contentlayer/hooks"
 import type { MDXComponents } from "mdx/types"
 import { Callout, ButtonLink, MdxLink } from "./mdx-components"
@@ -11,8 +13,8 @@ const components: MDXComponents = {
 export default function Mdx({ code }: { code: string }) {
   const Component = useMDXComponent(code)
   return (
-    <article className="prose">
+    <div className="prose prose-invert max-w-none">
       <Component components={components} />
-    </article>
+    </div>
   )
 }

@@ -2,8 +2,8 @@
 
 import aboutMdx from './about.mdx.json' assert { type: 'json' }
 import visionMdx from './vision.mdx.json' assert { type: 'json' }
-import projects__marketplaceMdx from './projects__marketplace.mdx.json' assert { type: 'json' }
 import projects__artifaktMdx from './projects__artifakt.mdx.json' assert { type: 'json' }
 import projects__escaveMdx from './projects__escave.mdx.json' assert { type: 'json' }
+import projects__marketplaceMdx from './projects__marketplace.mdx.json' assert { type: 'json' }
 
-export const allPages = [aboutMdx, visionMdx, projects__marketplaceMdx, projects__artifaktMdx, projects__escaveMdx]
+export const allPages = [aboutMdx, visionMdx, projects__artifaktMdx, projects__escaveMdx, projects__marketplaceMdx]
