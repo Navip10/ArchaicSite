@@ -1,0 +1,79 @@
+/* MDX / prose extras (no @apply) */
+.prose {
+  max-width: 70ch;
+  color: var(--white);
+}
+
+/* Headings */
+.prose h1, .prose h2, .prose h3 {
+  font-family: var(--font-space-grotesk), ui-sans-serif, system-ui;
+  line-height: 1.2;
+  color: var(--white);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.prose h1 { font-size: 2rem; }
+.prose h2 { font-size: 1.5rem; }
+.prose h3 { font-size: 1.25rem; }
+
+/* Paragraph & lists */
+.prose p { color: #d1d5db; line-height: 1.8; margin: 0.8rem 0; }
+.prose ul, .prose ol { padding-left: 1.2rem; color: #d1d5db; }
+.prose li { margin: 0.3rem 0; }
+
+/* Links */
+.prose a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--gold);
+}
+.prose a:hover { opacity: .85; }
+
+/* Blockquote */
+.prose blockquote {
+  border-left: 3px solid var(--gold);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #e5e7eb;
+  opacity: .9;
+}
+
+/* Code & pre */
+.prose code {
+  background: var(--obsidian-2);
+  color: var(--gray-1);
+  padding: 0.125rem 0.35rem;
+  border-radius: 0.25rem;
+}
+.prose pre {
+  background: var(--obsidian-2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+/* Tables */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+.prose th, .prose td {
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 0.6rem 0.75rem;
+}
+.prose th {
+  background: rgba(255,255,255,.04);
+  text-align: left;
+}
+
+/* HR */
+.prose hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+  margin: 2rem 0;
+}

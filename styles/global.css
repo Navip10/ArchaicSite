@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== Brand Tokens ========== */
+:root {
+  --gold: #E5B72C;         /* primary, logo + CTA */
+  --obsidian: #0B0B0F;     /* dark base */
+  --obsidian-2: #101820;   /* secondary dark / hero background */
+  --white: #F8F9FA;
+  --gray-1: #E1E3E6;
+  --emerald: #00C896;      /* accent (sparingly) */
+  --violet: #6B3EFF;       /* accent (sparingly) */
+
+  /* Fonts wired via next/font in layout; expose vars for use below */
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-inter: var(--font-inter);
+}
+
+html, body {
+  background: var(--obsidian);
+  color: var(--white);
+  scroll-behavior: smooth;
+  font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Typography helpers (no @apply) */
+.prose {
+  max-width: none;
+  color: var(--white);
+}
+.prose a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;   /* decoration-2 */
+  text-underline-offset: 4px;       /* underline-offset-4 */
+  text-decoration-color: var(--gold);
+  transition: opacity .2s ease;
+}
+.prose a:hover { opacity: .8; }
+.prose h1, .prose h2, .prose h3 {
+  font-family: var(--font-space-grotesk), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--white);
+  margin-top: 2rem; /* mt-8 */
+}
+.prose p {
+  color: #d1d5db; /* tailwind gray-300 equivalent */
+  line-height: 1.75; /* leading-relaxed */
+}
+
+/* Buttons (Design System) — no @apply */
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem; /* py-3 px-5 */
+  background: var(--gold);
+  color: var(--obsidian);
+  font-weight: 600;
+  transition: filter .2s ease, background-color .2s ease, opacity .2s ease;
+}
+.btn-primary:hover { filter: brightness(0.9); }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem; /* py-3 px-5 */
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  font-weight: 600;
+  transition: background-color .2s ease, opacity .2s ease;
+}
+.btn-secondary:hover { background: var(--obsidian-2); }
+
+/* Generic link hover */
+a:hover { opacity: .9; }
+
+/* Focus states */
+:focus-visible {
+  outline: 2px dashed var(--gold);
+  outline-offset: 3px;
+}
+
+/* Skip link (accessibility) */
+.skip-link {
+  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus {
+  position: static; width: auto; height: auto;
+  background: var(--gold); color: var(--obsidian);
+  padding: 0.5rem; border-radius: 8px;
+}
