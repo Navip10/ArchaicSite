@@ -1,5 +1,3 @@
-"use client"
-
 import Link from "next/link"
 import React from "react"
 
@@ -73,7 +71,6 @@ export function MdxLink(props: AnchorProps) {
     )
   }
 
-  // For internal links, only pass supported props to Next Link
   return (
     <Link
       href={href}

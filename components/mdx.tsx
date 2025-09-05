@@ -1,5 +1,3 @@
-"use client"
-
 import { useMDXComponent } from "next-contentlayer/hooks"
 import type { MDXComponents } from "mdx/types"
 import { Callout, ButtonLink, MdxLink } from "./mdx-components"
